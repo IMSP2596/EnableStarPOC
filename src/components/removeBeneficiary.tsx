@@ -15,11 +15,7 @@ import {
 	MessageBarBody,
 	MessageBarTitle,
 } from "@fluentui/react-components";
-import {
-	Dismiss24Regular,
-	PersonAdd20Regular,
-	PersonDeleteRegular,
-} from "@fluentui/react-icons";
+import { Dismiss24Regular, PersonDeleteRegular } from "@fluentui/react-icons";
 const useStyles = makeStyles({
 	root: {
 		display: "flex",
@@ -41,11 +37,7 @@ const RemoveBeneficiary: React.FC = () => {
 		(state: { beneficiaries: Beneficiary[] }) => state.beneficiaries
 	);
 	const dispatch = useDispatch();
-	const {
-		register,
-		handleSubmit,
-		formState: { errors },
-	} = useForm({ defaultValues: initialValues });
+	const { handleSubmit } = useForm({ defaultValues: initialValues });
 
 	useEffect(() => {
 		if (beneficiaryId) {

@@ -14,7 +14,6 @@ import {
 	DrawerHeaderTitle,
 	DrawerBody,
 	DrawerFooter,
-	Spinner,
 } from "@fluentui/react-components";
 import { PersonAdd20Regular, Dismiss24Regular } from "@fluentui/react-icons";
 const useStyles = makeStyles({
@@ -41,7 +40,7 @@ const EditBeneficiary: React.FC = () => {
 		register,
 		handleSubmit,
 		setValue,
-		formState: { errors, isSubmitSuccessful, isSubmitting },
+		formState: { errors },
 	} = useForm<Beneficiary>({
 		mode: "onChange",
 		defaultValues: initialValues,
@@ -133,6 +132,7 @@ const EditBeneficiary: React.FC = () => {
 			shouldValidate: true,
 			shouldDirty: true,
 		});
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [initialValues]);
 	return (
 		<div className={classes.root}>
