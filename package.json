@@ -1,6 +1,5 @@
 {
   "name": "banking-poc",
-  "homepage": " https://imsp2596.github.io/EnableStarPOC/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
