@@ -13,7 +13,7 @@ const App: React.FC = () => {
 	return (
 		<FluentProvider theme={webLightTheme}>
 			<Provider store={store}>
-				<Router basename='/banking-poc'>
+				<Router>
 					<div className='App'>
 						<Routes>
 							<Route path='/add' Component={AddBeneficiary} />
@@ -22,7 +22,7 @@ const App: React.FC = () => {
 								path='/remove/:beneficiaryId'
 								Component={RemoveBeneficiary}
 							/>
-							<Route path='/banking-poc' Component={ListBeneficiary} />
+							<Route path='/' Component={ListBeneficiary} />
 						</Routes>
 					</div>
 				</Router>
