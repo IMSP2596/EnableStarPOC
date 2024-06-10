@@ -55,6 +55,7 @@ const ListBeneficiary: React.FC = () => {
 			type: "LIST_BENEFICIARY",
 		}); // Fetch beneficiaries on component mount
 		setBeneficiaries(beneficiaries);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [dispatch]);
 	const handleClickAdd = () => {
 		navigate("/add");
