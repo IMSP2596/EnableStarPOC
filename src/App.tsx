@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import store from "./store/store";
 import { Provider } from "react-redux";
 import ListBeneficiary from "./components/listBeneficiary";
@@ -13,7 +13,7 @@ const App: React.FC = () => {
 	return (
 		<FluentProvider theme={webLightTheme}>
 			<Provider store={store}>
-				<Router basename='/EnableStarPOC'>
+				<Router basename='/banking-poc'>
 					<div className='App'>
 						<Routes>
 							<Route path='/add' Component={AddBeneficiary} />
@@ -22,7 +22,7 @@ const App: React.FC = () => {
 								path='/remove/:beneficiaryId'
 								Component={RemoveBeneficiary}
 							/>
-							<Route path='/EnableStarPOC' Component={ListBeneficiary} />
+							<Route path='/banking-poc' Component={ListBeneficiary} />
 						</Routes>
 					</div>
 				</Router>
