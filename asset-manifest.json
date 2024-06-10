@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/banking-poc/static/css/main.e6c13ad2.css",
+    "main.js": "/banking-poc/static/js/main.db99e750.js",
+    "index.html": "/banking-poc/index.html",
+    "main.e6c13ad2.css.map": "/banking-poc/static/css/main.e6c13ad2.css.map",
+    "main.db99e750.js.map": "/banking-poc/static/js/main.db99e750.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.db99e750.js"
+  ]
+}
