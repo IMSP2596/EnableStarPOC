@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/EnableStarPOC/static/css/main.e6c13ad2.css",
-    "main.js": "/EnableStarPOC/static/js/main.dcbfc1df.js",
+    "main.js": "/EnableStarPOC/static/js/main.63a103dd.js",
     "index.html": "/EnableStarPOC/index.html",
     "main.e6c13ad2.css.map": "/EnableStarPOC/static/css/main.e6c13ad2.css.map",
-    "main.dcbfc1df.js.map": "/EnableStarPOC/static/js/main.dcbfc1df.js.map"
+    "main.63a103dd.js.map": "/EnableStarPOC/static/js/main.63a103dd.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.dcbfc1df.js"
+    "static/js/main.63a103dd.js"
   ]
 }
