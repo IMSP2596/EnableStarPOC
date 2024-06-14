@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Beneficiary } from "../store/types/types";
 
 const BeneficiaryName:React.FC=()=>{
     const fullname = useSelector(
