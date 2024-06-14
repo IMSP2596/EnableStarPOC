@@ -7,6 +7,7 @@ import { FluentProvider, webLightTheme } from "@fluentui/react-components";
 import AddBeneficiary from "./components/addBeneficiary";
 import EditBeneficiary from "./components/editBeneficiary";
 import RemoveBeneficiary from "./components/removeBeneficiary";
+import BeneficiaryName from "./components/beneficiaryName";
 /*
  */
 const App: React.FC = () => {
@@ -22,6 +23,7 @@ const App: React.FC = () => {
 								path='/remove/:beneficiaryId'
 								Component={RemoveBeneficiary}
 							/>
+							<Route path='/bank' Component={BeneficiaryName} />
 							<Route path='/' Component={ListBeneficiary} />
 						</Routes>
 					</div>

@@ -62,7 +62,6 @@ const EditBeneficiary: React.FC = () => {
 	}, [beneficiaries, beneficiaryId, dispatch, navigate]); // Add dependencies
 	const onSubmit = (data: Beneficiary) => {
 		setIsOpen(true);
-
 		setInitialValues(data);
 	};
 	const handleConfirmation = () => {
@@ -77,7 +76,7 @@ const EditBeneficiary: React.FC = () => {
 			setMessages(true);
 		}, 2000);
 		setTimeout(() => {
-			navigate("/");
+			navigate("/bank");
 		}, 4000);
 	};
 	const handleCancle = () => {
@@ -98,6 +97,8 @@ const EditBeneficiary: React.FC = () => {
 			});
 		if (target.name === "bankName")
 			setValue("bankName", target.value, { shouldValidate: true });
+		if (target.name === "fullName")
+			setValue("fullName", target.value, { shouldDirty: true,shouldValidate: true });
 	};
 	useEffect(() => {
 		setValue("fullName", initialValues?.fullName || "", {
@@ -132,6 +133,7 @@ const EditBeneficiary: React.FC = () => {
 			shouldValidate: true,
 			shouldDirty: true,
 		});
+		
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [initialValues]);
 	return (
@@ -210,10 +212,15 @@ const EditBeneficiary: React.FC = () => {
 									<div className='ms-Grid-col ms-sm3 ms-md3 ms-lg3'>
 										<input
 											type='text'
-											disabled={true}
-											{...register("fullName", { required: false })}
+											{...register("fullName", { 
+												required: true,	
+												onBlur: (event) => handleChange(event)
+											 }
+											)
+											}
 										/>
 									</div>
+									
 								</div>
 
 								<div className='ms-Grid-row' style={{ padding: 5, margin: 5 }}>
